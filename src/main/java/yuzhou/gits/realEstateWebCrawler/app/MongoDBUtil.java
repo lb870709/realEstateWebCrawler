@@ -10,6 +10,7 @@ import com.mongodb.client.MongoClients;
 public class MongoDBUtil {
 
 	public static MongoClient getClient(){
+		System.out.println("修改");
 		return MongoClients.create(MongoClientSettings.builder()
 				.applyToClusterSettings(builder -> builder.hosts(Arrays.asList(
 				new ServerAddress("localhost", 27027))))
